@@ -12,10 +12,10 @@ export default function UsersList() {
   }, []);
 
   return (
-    <div>
-      {users.map((userData) => (
-        <User {...userData} />
+    <ul>
+      {users.map((userData, i) => (
+        <User {...userData} key={i} />
       ))}
-    </div>
+    </ul>
   );
 }
